@@ -1,0 +1,36 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.java_basico;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author walter.pasold
+ */
+public class Java_Basico {
+
+    public static String nome;
+    public static int n1,n2, soma;
+    
+    public static float divisao;
+    
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        
+        n1 = Integer.parseInt(JOptionPane.showInputDialog("DIgite o primeiro numero: "));
+        n2 = Integer.parseInt(JOptionPane.showInputDialog("DIgite o segundo numero: "));
+        
+        soma = n1 + n2;
+        
+        divisao = (float) soma / n1;
+                
+        JOptionPane.showMessageDialog(null,"Soma dos numeros é: "+soma);
+                
+        JOptionPane.showMessageDialog(null,"Divisao dos numeros é: "+divisao);
+        
+        
+    }
+}

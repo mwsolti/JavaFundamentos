@@ -1,0 +1,48 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.java_basico;
+
+import java.io.ObjectInputFilter;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author walter.pasold
+ */
+public class Java_Basico {
+    
+    public static int nota1, nota2, nota3, soma;
+    public static float media;
+    public static String statusAluno = "Reprovado";
+    
+    
+    
+    public static void main(String[] args) {
+    
+        nota1 = Integer.parseInt(JOptionPane.showInputDialog("DIgite a nota 1"));
+        nota2 = Integer.parseInt(JOptionPane.showInputDialog("DIgite a nota 2"));
+        nota3 = Integer.parseInt(JOptionPane.showInputDialog("DIgite a nota 3"));
+        
+        soma = nota1 + nota2 + nota3;
+        
+        media = (float) soma / 3;
+        
+        JOptionPane.showMessageDialog(null,"Media do aluno é: "+ media);
+        
+        //COmplete os Ifs Faltantes
+        
+        if (media >= 7) {
+            
+            statusAluno = "Aprovado";
+        }
+        else if (media >=4){
+            statusAluno = "Recuperação";
+        }
+        
+        JOptionPane.showMessageDialog(null, statusAluno);
+        
+        
+    }
+}

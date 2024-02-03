@@ -1,0 +1,63 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.java_basico;
+
+import java.io.ObjectInputFilter;
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author walter.pasold
+ */
+public class Java_Basico {
+    
+    public static int nota1, nota2, nota3, soma, idade;
+    public static float media;
+    public static String statusAluno = "Reprovado", strMedia, nomeALuno, textoFinal;
+   
+    
+    
+    
+    public static void main(String[] args) {
+    
+        nomeALuno = JOptionPane.showInputDialog("Digite o nome do aluno");
+        idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a Idade do Aluno: "));
+   
+        textoFinal = "O Aluno: "+nomeALuno +" Que tem a Idade: "+idade;
+        
+        nota1 = Integer.parseInt(JOptionPane.showInputDialog("Digite a nota 1: "));
+        nota2 = Integer.parseInt(JOptionPane.showInputDialog("Digite a nota 2: "));
+        nota3 = Integer.parseInt(JOptionPane.showInputDialog("Digite a nota 3: "));
+        
+        soma = nota1 + nota2 + nota3;
+        
+        media = (float) soma / 3;
+        
+        //COmplete os Ifs Faltantes
+        
+        DecimalFormat format = new DecimalFormat();
+        format.setMaximumFractionDigits(2);
+        
+        strMedia = format.format(media);
+        
+        textoFinal += " E Teve media: "+ strMedia; 
+        
+        if (media >= 7) {
+            
+            statusAluno = "Aprovado";
+        }
+        else if (media >=4){
+            statusAluno = "Recuperação";
+        }
+        
+        
+        textoFinal += " E está: "+ statusAluno;
+        
+        JOptionPane.showMessageDialog(null, textoFinal);
+        
+        
+    }
+}

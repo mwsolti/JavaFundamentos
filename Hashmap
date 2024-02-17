@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.prtj.hashmap;
+
+import java.util.HashMap;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author walter.pasold
+ */
+public class PRTJHashMap {
+
+    public static void main(String[] args) {
+            
+        HashMap<String,String> cadastroPessoa = new HashMap<String,String>();
+        
+        
+        cadastroPessoa.put("nome", "Walter");
+        
+        cadastroPessoa.put("sobreNome", "PAsold");
+        
+        
+        JOptionPane.showMessageDialog(null, cadastroPessoa.get("sobreNome"));
+        
+    }
+}

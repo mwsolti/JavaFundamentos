@@ -1,0 +1,81 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.hashmapfinal;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author walter.pasold
+ */
+public class HashMapFInal {
+
+    public static void main(String[] args) {
+       
+        String nome;
+        int idade;
+        float nota1 , nota2, nota3;
+                
+        
+        nome = JOptionPane.showInputDialog("DIgite o Nome do Aluno");
+        idade = Integer.parseInt(JOptionPane.showInputDialog("DIgite a Idade do Aluno"));
+        
+        nota1 = Float.parseFloat(JOptionPane.showInputDialog("Digite a Nota 1"));
+        nota2 = Float.parseFloat(JOptionPane.showInputDialog("Digite a Nota 2"));
+        nota3 = Float.parseFloat(JOptionPane.showInputDialog("Digite a Nota 3"));
+        
+        cadastraAluno(nome,idade,nota1,nota2,nota3);
+        
+    }
+    
+    
+    public static void cadastraAluno(String nome, int idade, float nota1 , float  nota2, float  nota3){  
+        
+        String txt;
+        
+        float media = cauculaMedia(nota1, nota2, nota3);
+        
+        String status = verificaStatus(media);
+        
+        
+        txt = "Nome: "+nome+" idade: "+idade+" media: "+media+" e: "+status;
+        
+        JOptionPane.showMessageDialog(null, txt);
+        
+        
+        
+    }
+    
+    
+    public static float cauculaMedia(float nota1 , float  nota2, float  nota3){
+        
+        float media = (nota1+nota2+nota3) / 3 ;
+        
+        return media;
+        
+    }
+    
+    
+    public static String verificaStatus (float media){
+        
+        String status = "Reprovado";
+        
+        if (media >=7) {
+            
+            status = "Aprovado";
+        }
+        else if (media >=4){
+            status = "Recuperação";
+        }
+        
+        return status;
+        
+    }
+    
+   
+    
+    
+    
+}
